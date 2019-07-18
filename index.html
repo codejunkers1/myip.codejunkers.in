@@ -1,22 +1,171 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <title>What is myip</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>What is my ip</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body{
+            font-size: 16px;
+        }
+        .full-body {
+            background: url('https://images.unsplash.com/photo-1561041230-718934bc26cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80');
+            background-attachment: fixed;
+            background-size: cover;
+            min-height: 100vh;
+            max-height: 100vh;
+            overflow-y: auto;
+            color: white;
+        }
+        .address-block {
+            background-color: white;
+            color: black;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .address-block .head{
+            padding: 15px;
+            font-size: 2.5em;
+        }
+        .address-block .body{
+            padding: 10px;
+            font-size: 2em;
+            min-height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #162058;
+            color: white;
+        }
+        .address-block .body{
+            font-size: 1em;
+        }
+        .ip {
+            font-size: 2.3em;
+        }
+        .lds-spinner {
+            color: official;
+            display: inline-block;
+            position: relative;
+            width: 64px;
+            height: 64px;
+            }
+            .lds-spinner div {
+            transform-origin: 32px 32px;
+            animation: lds-spinner 1.2s linear infinite;
+            }
+            .lds-spinner div:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 29px;
+            width: 5px;
+            height: 14px;
+            border-radius: 20%;
+            background: #fff;
+            }
+            .lds-spinner div:nth-child(1) {
+            transform: rotate(0deg);
+            animation-delay: -1.1s;
+            }
+            .lds-spinner div:nth-child(2) {
+            transform: rotate(30deg);
+            animation-delay: -1s;
+            }
+            .lds-spinner div:nth-child(3) {
+            transform: rotate(60deg);
+            animation-delay: -0.9s;
+            }
+            .lds-spinner div:nth-child(4) {
+            transform: rotate(90deg);
+            animation-delay: -0.8s;
+            }
+            .lds-spinner div:nth-child(5) {
+            transform: rotate(120deg);
+            animation-delay: -0.7s;
+            }
+            .lds-spinner div:nth-child(6) {
+            transform: rotate(150deg);
+            animation-delay: -0.6s;
+            }
+            .lds-spinner div:nth-child(7) {
+            transform: rotate(180deg);
+            animation-delay: -0.5s;
+            }
+            .lds-spinner div:nth-child(8) {
+            transform: rotate(210deg);
+            animation-delay: -0.4s;
+            }
+            .lds-spinner div:nth-child(9) {
+            transform: rotate(240deg);
+            animation-delay: -0.3s;
+            }
+            .lds-spinner div:nth-child(10) {
+            transform: rotate(270deg);
+            animation-delay: -0.2s;
+            }
+            .lds-spinner div:nth-child(11) {
+            transform: rotate(300deg);
+            animation-delay: -0.1s;
+            }
+            .lds-spinner div:nth-child(12) {
+            transform: rotate(330deg);
+            animation-delay: 0s;
+            }
+            @keyframes lds-spinner {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+            }
+    </style>
   </head>
   <body>
-    <h1>Welcom to myip</h1>
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12 full-body">
+                  <br><br><br>
+                  <div class="row">
+                    <div class="col-4">
+                    </div>
+                    <div class="col-4">
+                        <div class="address-block">
+                            <div class="head text-center">
+                                Your Ip Address
+                            </div>
+                            <div class="body text-center">
+                                <div id="ip-block">
+                                    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                                    <p>Checking your network 1sec.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                type: 'GET',
+                url: 'https://api.ipify.org?format=json',
+                dataType: 'json',
+                success: function(result){
+                    $('#ip-block').html(`<span class="ip">${result.ip}</span>`);
+                }
+            });
+        });
+        </script>
   </body>
 </html>
